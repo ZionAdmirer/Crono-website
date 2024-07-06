@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Crono - Integrations</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header */
+    header {
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      animation: fadeIn 0.5s ease;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 700;
+      color: #007bff;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    nav ul {
+      list-style-type: none;
+      display: flex;
+    }
+
+    nav li {
+      margin-left: 20px;
+    }
+
+    nav a {
+      color: #333;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #007bff;
+    }
+
+    /* Feature Section */
+    .feature {
+      padding: 100px 20px;
+      text-align: center;
+      animation: fadeIn 1s ease;
+      flex-grow: 1;
+    }
+
+    .feature h1 {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 40px;
+    }
+
+    .feature-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-gap: 40px;
+      text-align: left;
+      animation: slideUp 1.5s ease;
+    }
+
+    .feature-item {
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      border-radius: 5px;
+      transition: transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .feature-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .feature-item i {
+      font-size: 48px;
+      margin-bottom: 20px;
+      color: #007bff;
+    }
+
+    .feature-item h2 {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .feature-item p {
+      font-size: 16px;
+      font-weight: 400;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .feature-item a {
+      display: inline-block;
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+
+    .feature-item a:hover {
+      background-color: #0056b3;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      animation: fadeIn 2s ease;
+      margin-top: auto;
+    }
+
+    footer p {
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideUp {
+      0% {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Crono</div>
+    <nav>
+      <ul>
+        <!-- <li><a href="#">Home</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Contact</a></li> -->
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="feature">
+      <h1>Integrations</h1>
+      <div class="feature-content">
+        <div class="feature-item">
+          <i class="fab fa-google"></i>
+          <h2>Google Calendar</h2>
+          <p>Sync your Crono bookings with Google Calendar for a seamless scheduling experience.</p>
+          <a href="#">Integrate with Google</a>
+        </div>
+        <div class="feature-item">
+          <i class="fab fa-microsoft"></i>
+          <h2>Microsoft Outlook</h2>
+          <p>Easily integrate Crono with Microsoft Outlook to keep your bookings organized.</p>
+          <a href="#">Integrate with Outlook</a>
+        </div>
+        <div class="feature-item">
+          <i class="fab fa-apple"></i>
+          <h2>Apple Calendar</h2>
+          <p>Sync your Crono bookings with Apple Calendar for a seamless experience on iOS devices.</p>
+          <a href="#">Integrate with Apple Calendar</a>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-envelope"></i>
+          <h2>Email Providers</h2>
+          <p>Connect Crono with your email provider to send automated booking confirmations and reminders.</p>
+          <a href="#">Explore Email Integrations</a>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-credit-card"></i>
+          <h2>Payment Gateways</h2>
+          <p>Integrate Crono with popular payment gateways to offer secure online payments.</p>
+          <a href="#">Integrate Payment Gateways</a>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-chart-bar"></i>
+          <h2>Analytics Platforms</h2>
+          <p>Connect Crono with your preferred analytics tools to gain deeper insights into your booking data.</p>
+          <a href="#">Explore Analytics Integrations</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Crono. All rights reserved.</p>
+  </footer>
+</body>
+</html>
